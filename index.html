@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjalika WaterWorld</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
+    <style>
+      #contactpara2{
+        display: none;
+      }
+        .topbar {
+            background: #012169;
+            padding: 5px 0;
+            color: white;
+        }
+        .topbar .contact-info {
+            font-size: 14px;
+        }
+        .social-icons a {
+            margin-left: 10px;
+            color: white;
+        }
+        .navbar {
+            background: white !important;
+        }
+        .navbar-nav .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .navbar-toggler {
+            border: none;
+        }
+        .btn1{
+      background-color: #012169;
+      color: #ffff;
+      height: 40px;
+      font: 15px "Open Sans", serif;
+      border-radius: 15px;
+      width: 100px;
+    
+
+    }
+        .contact-btn {
+            background: #012169;
+            color: white;
+            border-radius: 5px;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+        }
+        .contact-btn:hover {
+            background: #012169;
+            transform: scale(1.05);
+        }
+        iframe {
+        
+            margin-top: 20px;
+            border-radius: 40px;
+            width: 100%;
+            height: 400px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        .carousel-caption h5, .carousel-caption p {
+            font-family: 'Pacifico', cursive;
+            font-size: 24px;
+            font-weight: 300;
+        }
+        @media (max-width: 768px) {
+            .topbar .d-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .carousel-item img {
+                width: 100%;
+                height: auto;
+            }
+
+            .carousel-item {
+                height: 50vh;
+            }
+
+            .carousel-caption h5 {
+                font-size: 18px;
+            }
+
+            iframe {
+                width: 100%;
+                height: 200px;
+            }
+
+            .carousel-item {
+                height: 300px;
+            }
+        }
+
+      
+        
+        section {
+            padding: 60px 0;
+           /* min-height: 100vh;*/
+        }
+
+.sec-title{
+  position:relative;
+  z-index: 1;
+  margin-bottom:60px;
+}
+
+.sec-title .title{
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ff2222;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.sec-title h2{
+  position: relative;
+  display: block;
+  font-size:50px;
+  line-height: 1.28em;
+  color: #222222;
+ 
+  padding-bottom:18px;
+}
+
+.sec-title h2:before{
+  position:absolute;
+  content:'';
+  left:0px;
+  bottom:0px;
+  width:50px;
+  height:3px;
+  background-color:#d1d2d6;
+}
+
+.sec-title .text{
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+  color: #848484;
+  font-weight: 400;
+  margin-top: 35px;
+}
+
+.sec-title.light h2{
+  color: #ffffff;
+}
+
+.sec-title.text-center h2:before{
+  left:50%;
+  margin-left: -25px;
+}
+
+.list-style-one{
+  position:relative;
+}
+
+.list-style-one li{
+  position:relative;
+  font-size:16px;
+  line-height:26px;
+  color: #222222;
+  font-weight:400;
+  padding-left:35px;
+  margin-bottom: 12px;
+}
+
+.list-style-one li:before {
+    content: "\f058";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    display: block;
+    font-size: 18px;
+    padding: 0px;
+    color: #ff2222;
+    font-weight: 600;
+    -moz-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1.6;
+    font-family: "Font Awesome 5 Free";
+}
+
+.list-style-one li a:hover{
+  color: #44bce2;
+}
+
+.btn-style-one{
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 10px 30px;
+  font-weight: 600;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  background-color: #ff2222;
+}
+
+.btn-style-one:hover{
+  background-color: #001e57;
+  color: #ffffff;
+}
+.about-section{
+  position: relative;
+  padding: 120px 0 70px;
+}
+
+.about-section .sec-title{
+  margin-bottom: 45px;
+}
+
+.about-section .content-column{
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.about-section .content-column .inner-column{
+  position: relative;
+  padding-left: 30px;
+}
+
+.about-section .text{
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #848484;
+  font-weight: 400;
+}
+
+.about-section .list-style-one{
+  margin-bottom: 45px;
+}
+
+.about-section .btn-box{
+  position: relative;
+}
+
+.about-section .btn-box a{
+  padding: 15px 50px;
+}
+
+.about-section .image-column{
+  position: relative;
+}
+
+.about-section .image-column .text-layer{
+    position: absolute;
+    right: -110px;
+    top: 50%;
+    font-size: 325px;
+    line-height: 1em;
+    color: #ffffff;
+    margin-top: -175px;
+    font-weight: 500;
+}
+
+.about-section .image-column .inner-column{
+  position: relative;
+  padding-left: 120px;
+  padding-bottom: 125px;
+}
+
+.about-section .image-column .inner-column:before{
+  position: absolute;
+  left: -75px;
+  top: 65px;
+  height: 520px;
+  width: 520px;
+  background-image:url(https://i.ibb.co/fxJ1jtC/about-circle-1.png);
+  content: "";
+}
+
+.about-section .image-column .image-1{
+  position: relative;
+}
+
+.about-section .image-column .image-2{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.about-section .image-column .image-2 img,
+.about-section .image-column .image-1 img{
+  box-shadow: 0 30px 50px rgba(8,13,62,.15);
+}
+
+.about-section .image-column .video-link{
+  position: absolute;
+  left: 70px;
+  top: 170px;
+}
+
+.about-section .image-column .video-link .link{
+  position: relative;
+  display: block;
+  font-size: 22px;
+  color: #191e34;
+  font-weight: 400;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 30px 50px rgba(8,13,62,.15);
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.about-section .image-column .video-link .link:hover{
+  background-color: #191e34;
+  color: white}
+
+  ul{
+  display: flex;
+  width: calc(80% - 2rem);
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease;
+}
+
+ul:is(:hover, :focus-within) img {
+  opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
+  filter: grayscale(calc(1 - var(--active-lerp, 0)));
+}
+
+:root {
+  --lerp-0: 1;
+  --lerp-1: 0.5787037;
+  --lerp-2: 0.2962963;
+  --lerp-3: 0.125;
+  --lerp-4: 0.037037;
+  --lerp-5: 0.0046296;
+  --lerp-6: 0;
+}
+
+a {
+  outline-offset: 4px;
+}
+
+li {
+  flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+  transition: flex 0.2s ease;
+}
+
+li:is(:hover, :focus-within) {
+  --active-lerp: var(--lerp-0);
+  z-index: 7;
+}
+li:has(+ li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li {
+  --active-lerp: var(--lerp-1);
+  z-index: 6;
+}
+li:has(+ li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li + li {
+  --active-lerp: var(--lerp-2);
+  z-index: 5;
+}
+li:has(+ li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li + li + li {
+  --active-lerp: var(--lerp-3);
+  z-index: 4;
+}
+li:has(+ li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li + li + li + li {
+  --active-lerp: var(--lerp-4);
+  z-index: 3;
+}
+li:has(+ li + li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li + li + li + li + li {
+  --active-lerp: var(--lerp-5);
+  z-index: 2;
+}
+li:has(+ li + li + li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li + li + li + li + li + li {
+  --active-lerp: var(--lerp-6);
+  z-index: 1;
+}
+
+
+/* Footer Styling */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001e57;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/* Each Section */
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+#contactpara{
+  display: none;
+}
+/* Logo */
+.footer-section img {
+    width: 150px;
+}
+
+/* Footer Text Styling */
+.footer-section h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f4c842;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-section p:hover {
+    color: #f4c842;
+}
+
+/* Footer Bottom Text */
+.lastline {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+}
+form{
+  padding: 20px;
+  background-color: rgba(143, 142, 142, 0.26);
+  border-radius: 15px;
+  border: none;
+  margin-top: 30px;
+  box-shadow: black 2px 2px 9px;
+}
+input{
+  margin: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: black 1px 1px 5px;
+  background-color: rgba(255, 255, 255, 0.644);
+}
+#submit{
+  background-color: #001e57;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  box-shadow: black 1px 1px 5px;
+  width: 80px;
+  padding: 4px;
+  margin: 10px;
+}
+    </style>
+</head>
+ <script> function increase() { let input = document.getElementById("counter"); input.value = parseInt(input.value) + 1; } function decrease() { let input = document.getElementById("counter"); let value = parseInt(input.value); if (value > 1) { input.value = value - 1; } } document.getElementById("counter").addEventListener("input", function() { if (this.value < 1) { this.value = 1; } }); 
+      </script>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div id="cont" class="contact-info">
+                📞 +123456789 | ✉ info@example.com
+            </div>
+            <div class="social-icons">
+                <a href="https://r.search.yahoo.com/_ylt=AwrjJjK6tqFnCOkA04hXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1739860923/RO=10/RU=https%3a%2f%2fwww.facebook.com%2f/RK=2/RS=QOSiN42yzKqTICtooFznicU853I-"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="logo-removebg-preview (1).png" alt="Logo" height="70"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item" style="flex: auto;"><a class="nav-link" href="#rate"><i class="fa-regular fa-calendar-check" style="color: #012169;"></i> Rate & Hours</a></li>
+                <li class="nav-item"  style="flex: auto;"><a class="nav-link" href="#attract">   <i class="fa-solid fa-photo-film" style="color: #012169;"></i>Attraction</a></li>
+                <li class="nav-item"  style="flex: auto;"><a class="nav-link" href="#school"> <i class="fa-solid fa-hotel" style="color: #012169;"></i> Student Reservation</a></li>
+                <li class="nav-item"  style="flex: auto;" ><a class="nav-link" href="#video"><i class="fa-solid fa-video" style="color: #012169;"></i>  Video Plan</a></li>
+                <li class="nav-item"  style="flex: auto;" ><a class="nav-link" href="#rate">  <i class="fa-solid fa-record-vinyl" style="color: #012169;"></i> Your Visit</a></li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+<!-- Carousel -->
+<div id="sunwaySlider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="s3.jpg" class="d-block w-100" alt="Sunway Lagoon 1">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Welcome to Sanjalika WaterWorld</h5>
+                <p>Experience the ultimate water adventure and theme park rides!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="sq.jpg" class="d-block w-100" alt="Sunway Lagoon 2">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Exciting Rides & Attractions</h5>
+                <p>Enjoy thrilling roller coasters, water slides, and more!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="s1.avif" class="d-block w-100" alt="Sunway Lagoon 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Perfect for Family & Friends</h5>
+                <p>Make unforgettable memories with your loved ones.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#sunwaySlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#sunwaySlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+<!-- Main content -->
+<div class="container">
+    <div class="row" style="margin-top: 10px;" id="video">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" data-aos="flip-left"> <h1 style="color: #012169;text-align: center;font-family: 'Brush Script MT', cursive;margin-top: 30px;
+">Explore Sanjalika WaterWorld</h1>
+            <p style="text-align: center ;">Discover a world of excitement at Sanjalika WaterWorld! From thrilling water slides and wave pools to relaxing lazy rivers and splash zones, there’s something for everyone. </p>
+        </div>
+        <div class="col-md-2"></div>
+        <iframe  src="https://www.youtube.com/embed/EJE5YCJxmc0" title="Our Best Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>
+   
+
+
+    
+    <div class="row" style="margin-top: 50px;" id="school">
+        <div class="col-md-6" data-aos="zoom-in-down" style="background-color: #012169;color: white;border: 2px solid;border-radius: 30px;padding: 20px;"> 
+            <h1 style="font-family: 'Brush Script MT', cursive;">School Outings</h1>
+            <p>What makes Sanjalika WaterWorld such a perfect choice for a school outing? It offers amazing rides, fantastic facilities and simply superlative service. More than that, it has a professional team who can tailor your visit perfectly for you, from a straight forward trip for you and your colleagues, to a private party with food, drinks and special entertainment.</p>
+        </div>
+        <div class="col-md-6 d-none d-sm-block" data-aos="flip-down" >
+            <img src="https://sunwaylagoon.com.pk/wp-content/uploads/2024/09/MFT_9010-3.jpg" style="border: 2px solid white ;border-radius: 30px;" width="500" height="300">
+        </div>
+    </div>
+    <form id="bookingForm" action="index.html" .onload>
+    <h1>Student (and Teacher) Reservation</h1>
+    <script> function setMinDateTime() { let now = new Date(); let year = now.getFullYear(); let month = String(now.getMonth() + 1).padStart(2, '0'); // Month (01-12)
+     let day = String(now.getDate()).padStart(2, '0'); // Day (01-31)
+      let hours = String(now.getHours()).padStart(2, '0'); // Hours (00-23)
+       let minutes = String(now.getMinutes()).padStart(2, '0'); //Minutes (00-59)
+        let minDateTime = `${year}-${month}-${day}T${hours}:${minutes}`; document.getElementById("datetime").min = minDateTime; document.getElementById("date").min = `${year}-${month}-${day}`; document.getElementById("time").min = `${hours}:${minutes}`; }
+      </script> 
+      <label for="datetime">Date & Time :</label><br>
+    <input type="datetime-local" id="datetime" name="datetime" required><br>
+    <label for="counter">No. of person(s) :</label><br>
+    <input type="number" id="counter" min="1" required> <br>
+    <label for="phone">Contact no. :</label><br>
+    <input type="tel" id="phone" name="phone" placeholder="+1 123-456-7890" pattern="^\+?\d{1,4}[\s-]?\d{3}[\s-]?\d{3}[\s-]?\d{4}$" required> <br>
+    <label for="textres">Name of Institute :</label><br>
+    <input id="textres" type="text" required><br>
+    <button id="submit">Book</button>
+   <p id="mytext"><strong><em>If the window is reloaded means your Reservation is booked</em></strong></p>
+  </form>
+    <section class="about-section">
+        <div class="container">
+            <div class="row">                
+                <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                    <div class="inner-column">
+                        <div class="sec-title">
+                            <span class="title" style="color: black;" data-aos="fade-up">About Us</span>
+                            <h2 style="color: #001e57;font-family: 'Brush Script MT', cursive;" data-aos="fade-up">Sanjalika WaterWorld the <br>Environment</h2>
+                        </div>
+                        <div class="text" data-aos="fade-up">Sanjalika WaterWorld committed to being environmentally conscious and recognizes the importance of protecting the environment for which the very nature of our business relies on. As a leisure facility focusing on fun, safety and cleanliness, we have an inherent responsibility to the community to reflect the values we live by. We conduct business in a responsible and transparent manner that is balanced economically, socially and environmentally.</div>
+                      
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="image-column col-lg-6 col-md-12 col-sm-12 d-none d-sm-block">
+                    <div class="inner-column wow fadeInLeft">
+                        <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img src="s4.jpg" alt="" width="300px"></a></figure>
+                        <figure class="image-2"><a href="#" class="lightbox-image" data-fancybox="images"><img src="s5.jpg" alt="" width="300px"></a></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="row" id="rate">
+        <div class="col-md-12 text-center">
+            <h2 style="color: #001e57;font-family: 'Brush Script MT', cursive;" data-aos="fade-up">Rate & Hours</h2>
+            <div class="text" data-aos="fade-up" style="color: #848484;">Sanjalika WaterWorld in Pakistan is an exciting destination for families and adventure enthusiasts alike. This lively park features a variety of thrilling water rides, relaxing pools, and attractions for all ages. With its stunning slides, lazy rivers, and wave pools, it promises a day filled with fun and excitement. Whether you’re looking to conquer adrenaline-pumping rides or simply enjoy a leisurely day in the sun, Sunway Lagoon Water Park is the perfect spot to create lasting memories with friends and family!</div>
+
+            <img src="s7.PNG" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+
+
+<div class="row" id="attract">
+    <h2 style="color: #001e57;font-family: 'Brush Script MT', cursive;text-align: center;" data-aos="fade-up">Our Attractions</h2>
+    <div class="text" data-aos="fade-up" style="color: #848484;text-align: center;">Pools & World Craziest Slides Experience</div>
+
+    <ul class="results ul2">
+        <li class="result">
+          <a href="#"><img src="w1.jpg" width="500" height="500" alt=""></a>
+        </li>
+        <li class="result">
+          <a href="#"><img src="w2.jpg" width="500" height="500" alt=""></a>
+        </li>
+        <li class="result">
+          <a href="#"><img src="w3.jpg" width="500" height="500" alt=""></a>
+        </li>
+        <li class="result">
+          <a href="#"><img src="w4.jpg" height="500" alt=""></a>
+        </li>
+        <li class="result">
+          <a href="#"><img src="w5.jpg" width="500" height="500" alt=""></a>
+        </li>
+        <li class="result">
+          <a href="#"><img src="w6.jpg" width="500" height="500" alt=""></a>
+        </li>
+        <li class="result">
+          <a href="#"><img src="w7.jpg" width="500" height="500" alt=""></a>
+        </li>
+        <li class="result">
+          <a href="#"><img src="w8.jpg" width="500" height="500" alt=""></a>
+        </li>
+        <li class="result">
+          <a href="#"><img src="w9.jpg" width="500" height="500" alt=""></a>
+        </li>
+        <li class="result">
+          <a href="#"><img src="w1.jpg" width="500" height="500" alt=""></a>
+        </li>
+        <li class="result">
+          <a href="#"><img src="w2.jpg" width="500" height="500" alt=""></a>
+        </li>
+        <li class="result">
+          <a href="#"><img src="w3.jpg" width="500" height="500" alt=""></a>
+        </li>
+      </ul>
+</div>
+
+
+<footer class="footer" style="margin-top: 30px;">
+    <div class="footer-section">
+        <img src="logo-removebg-preview (1).png" alt="Logo">
+    </div>
+    <div class="footer-section">
+        <h5>Important Links</h5>
+        <p><a href="#rate">Rate & Hours</a></p>
+        <p><a href="#attract">Attractions</a></p>
+        <p><a href="#school">Student Reservation</a></p>
+        <p><a href="#video">Video</a></p>
+        <p><a href="#rate">Plan Your Visit</a></p>
+    </div>
+    <div class="footer-section">
+        <h5>Contact</h5>
+        <p>info@SanjalikaWaterWorld.com.pk</p>
+        <p>03248187998</p>
+        <p>6.5 Kms, Ahead From Gharo City, Main</p>
+        <p>National Highway, District Thatta, Sindh</p>
+        <p class="lastline">© 2024 Sanjalika Waterworld– All Rights Reserved. Designed by Zafi DigiExpert</p>
+    </div>
+</footer>
+
+</div>
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Wait for the DOM to be fully loaded before initializing AOS
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init();
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
